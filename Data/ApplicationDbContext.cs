@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Calendario.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Calendario.Data;
@@ -9,4 +10,8 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+
+
+    public DbSet<Evento> Eventos { get; set; }
+
 }

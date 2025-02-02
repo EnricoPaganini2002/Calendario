@@ -1,0 +1,54 @@
+  /* Aumentar el tamaño del título del evento */
+  .fc-event-title {
+      font-size: 2em;
+      /* Tamaño ajustado para evitar desbordamiento */
+      font-weight: bold;
+      text-align: center;
+      white-space: normal;
+      /* Permite saltos de línea */
+      word-wrap: break-word;
+      /* Corta palabras largas */
+      overflow: hidden;
+      /* Evita que sobresalga */
+      display: block;
+      /* Asegura que respete el ancho del contenedor */
+  }
+
+  /* Ajustar tamaño del contenedor */
+  .fc-event-container {
+      padding: 5px;
+      max-width: 100%;
+      /* Se ajusta al ancho del calendario */
+      text-align: center;
+      max-height: 100px;
+      /* Limita la altura */
+      overflow: hidden;
+      /* Si el texto es muy largo, lo corta */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Asegura que el texto se centre */
+  }
+
+  /* Ajuste de estilo para tamaños pequeños */
+  @media (max-width: 480px) {
+      .fc-event-title {
+          font-size: 1.2em;
+          /* Reduce el tamaño del texto en pantallas pequeñas */
+          overflow: hidden !important;
+          /* Si el texto es muy largo, lo corta */
+      }
+
+      .fc-event-container {
+          max-width: 90%;
+          /* Ajusta el contenedor a un 90% del tamaño de la pantalla */
+          padding: 3px;
+      }
+  }
+
+  /* Contenedor del calendario con scroll horizontal */
+  .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      /* Mejor compatibilidad en dispositivos móviles */
+  }
